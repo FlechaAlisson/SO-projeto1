@@ -1,13 +1,14 @@
-import config.Config;
+import data.Data;
 import fileHandler.FileHandler;
-
+import scheduling.Scheduling;
 
 
 public class project {
     public static void main(String[] args) {
         FileHandler fileHandler = new FileHandler("C:/Users/afcfl/IdeaProjects/project1/src/processos.txt");
-        Config config = fileHandler.readFile();
-        System.out.println(config);
+        Scheduling s = new Scheduling();
+        Data data = fileHandler.readFile();
+        System.out.println(s.lottery(data.list));
 
     }
 }

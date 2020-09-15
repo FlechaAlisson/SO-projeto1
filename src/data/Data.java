@@ -1,11 +1,11 @@
-package config;
+package data;
 
-import pcb.Pcb;
+import pcb.PCB;
 
 import java.util.ArrayList;
 
-public class Config {
-    public ArrayList<Pcb> list = new ArrayList();
+public class Data {
+    public ArrayList<PCB> list = new ArrayList();
     public float quantum;
 
     @Override

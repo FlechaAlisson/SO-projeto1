@@ -1,7 +1,7 @@
 package fileHandler;
 
-import config.Config;
-import pcb.Pcb;
+import data.Data;
+import pcb.PCB;
 
 import java.io.*;
 import java.util.Scanner;
@@ -15,21 +15,21 @@ public class FileHandler {
     public String fileName;
 
 
-    public Config readFile(){
+    public Data readFile(){
 
-        Config config = new Config();
+        Data data = new Data();
 
         Scanner reader;
         try {
             reader = new Scanner(new File(fileName));
             System.out.println("Total de processos: "+(Integer.parseInt(reader.nextLine())));
-            config.quantum = Float.parseFloat(String.valueOf(reader.nextLine()));
+            data.quantum = Float.parseFloat(String.valueOf(reader.nextLine()));
 
 
             while (reader.hasNext()){
-                Pcb pcb = new Pcb(Integer.parseInt(reader.nextLine()),reader.nextLine(),
+                PCB pcb = new PCB(Integer.parseInt(reader.nextLine()),reader.nextLine(),
                         Integer.parseInt(reader.nextLine()),Integer.parseInt(reader.nextLine()));
-                config.list.add(pcb);
+                data.list.add(pcb);
 
             }
 
@@ -38,7 +38,7 @@ public class FileHandler {
             e.printStackTrace();}
 
 
-        return config;
+        return data;
     }
 
 }
