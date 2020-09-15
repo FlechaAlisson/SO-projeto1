@@ -7,16 +7,20 @@ import java.util.ArrayList;
 
 public class Scheduling {
 
-    public ArrayList<PCB> lottery (ArrayList<PCB> list){
+    public ArrayList<PCB> lottery (ArrayList<PCB> list, float quantum){
         Random r = new Random();
         ArrayList<PCB> newList = new ArrayList();
 
-        int listSize = list.size();
-        for (int i = 0; i < listSize; i++) {
+        while(!list.isEmpty()) {
 
             int aux =  Math.abs(r.nextInt() % list.size());
-            PCB aux2 = list.remove(aux);
-            newList.add(aux2);
+            newList.add(list.get(aux));
+            /*Seta o novo valor do tempo necessario pra terminar o processo
+            * se o valor for menor do que 0, então ele só atribui o 0 */
+            list.get(aux).setTimeNecessary((list.get(aux).getTimeNecessary() - quantum) < 0 ? 0 :
+                    list.get(aux).getTimeNecessary() - quantum);
+            if (list.get(aux).getTimeNecessary() <= 0)
+                list.remove(aux);
         }
         return newList;
     }

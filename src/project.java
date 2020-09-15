@@ -8,7 +8,7 @@ public class project {
         FileHandler fileHandler = new FileHandler("C:/Users/afcfl/IdeaProjects/project1/src/processos.txt");
         Scheduling s = new Scheduling();
         Data data = fileHandler.readFile();
-        System.out.println(s.lottery(data.list));
+        System.out.println(s.lottery(data.list, data.quantum));
 
     }
 }

@@ -28,7 +28,7 @@ public class FileHandler {
 
             while (reader.hasNext()){
                 PCB pcb = new PCB(Integer.parseInt(reader.nextLine()),reader.nextLine(),
-                        Integer.parseInt(reader.nextLine()),Integer.parseInt(reader.nextLine()));
+                        Float.parseFloat(reader.nextLine()),Integer.parseInt(reader.nextLine()));
                 data.list.add(pcb);
 
             }
