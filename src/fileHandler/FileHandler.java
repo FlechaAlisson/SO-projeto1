@@ -4,6 +4,7 @@ import data.Data;
 import pcb.PCB;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileHandler {
@@ -39,6 +40,49 @@ public class FileHandler {
 
 
         return data;
+    }
+
+
+    public void writeData(ArrayList<PCB> list, String metodo){
+        File file = new File(metodo+".txt");
+
+
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+
+
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(file.getAbsoluteFile());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        BufferedWriter bw = new BufferedWriter(fw);
+
+        for (PCB p : list) {
+
+            try {
+                bw.write("PID: " + p.getId());
+                bw.newLine();
+                bw.write("Estado: " + p.getState());
+                bw.newLine();
+                bw.write("Prioridade: " + p.getPriority());
+                bw.newLine();
+                bw.write("=========================================================");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

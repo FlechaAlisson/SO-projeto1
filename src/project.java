@@ -18,8 +18,8 @@ public class project {
         ArrayList<PCB> list2= new ArrayList<PCB>(data.list);;
         Collections.copy(list2, data.list);
 
-        System.out.println("STF: "+s.shorttestFirst(list2));
-        System.out.println("Lottery: "+s.lottery(list1, data.quantum));
+        fileHandler.writeData(s.shorttestFirst(list1), "STF");
+        fileHandler.writeData(s.lottery(list2, data.quantum), "LOTTERY");
 
     }
 }
