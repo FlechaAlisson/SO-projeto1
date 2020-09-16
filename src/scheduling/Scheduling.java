@@ -1,6 +1,8 @@
 package scheduling;
 
 import pcb.PCB;
+
+import java.util.Collections;
 import java.util.Random;
 
 import java.util.ArrayList;
@@ -23,5 +25,13 @@ public class Scheduling {
                 list.remove(aux);
         }
         return newList;
+    }
+
+
+    public ArrayList<PCB> shorttestFirst(ArrayList<PCB> list){
+
+        Collections.sort(list);
+
+        return list;
     }
 }

@@ -2,7 +2,7 @@ package pcb;
 
 
 
-public class PCB {
+public class PCB implements Comparable<PCB>{
     private int id;
     private String state;
     private float timeNecessary;
@@ -46,6 +46,12 @@ public class PCB {
     public void setPriority(int priority) {
         this.priority = priority;
     }
+
+    @Override
+    public int compareTo(PCB pcb){
+        return (Float.compare(this.timeNecessary, pcb.getTimeNecessary()));
+    }
+
 
     @Override
     public String toString() {
