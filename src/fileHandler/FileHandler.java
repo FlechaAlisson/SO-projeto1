@@ -18,22 +18,23 @@ public class FileHandler {
 
     public Data readFile(){
 
-        Data data = new Data();
+        Data data = null;
 
         Scanner reader;
         try {
             reader = new Scanner(new File(fileName));
             System.out.println("Total de processos: "+(Integer.parseInt(reader.nextLine())));
-            data.quantum = Float.parseFloat(String.valueOf(reader.nextLine()));
-
+            float quantum_aux = Float.parseFloat(String.valueOf(reader.nextLine()));
+            ArrayList<PCB> pcbList_aux = new ArrayList();
 
             while (reader.hasNext()){
                 PCB pcb = new PCB(Integer.parseInt(reader.nextLine()),reader.nextLine(),
                         Float.parseFloat(reader.nextLine()),Integer.parseInt(reader.nextLine()));
-                data.list.add(pcb);
+                pcbList_aux.add(pcb);
 
             }
 
+            data = new Data(pcbList_aux, quantum_aux);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();}
@@ -72,7 +73,7 @@ public class FileHandler {
                 bw.newLine();
                 bw.write("Prioridade: " + p.getPriority());
                 bw.newLine();
-                bw.write("=========================================================");
+                bw.write("=========================================================\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }

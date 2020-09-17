@@ -21,8 +21,13 @@ public class Scheduling {
             * se o valor for menor do que 0, então ele só atribui o 0 */
             list.get(aux).setTimeNecessary((list.get(aux).getTimeNecessary() - quantum) < 0 ? 0 :
                     list.get(aux).getTimeNecessary() - quantum);
-            if (list.get(aux).getTimeNecessary() <= 0)
+            //muda o estado pra bloqueado
+            list.get(aux).setState("bloqueado");
+            //se o tempo necessario for melhor ou igual a zero, entao muda pra finalizado e o retira da lista
+            if (list.get(aux).getTimeNecessary() <= 0) {
+                list.get(aux).setState("finalizado");
                 list.remove(aux);
+            }
         }
         return newList;
     }
@@ -31,6 +36,10 @@ public class Scheduling {
     public ArrayList<PCB> shorttestFirst(ArrayList<PCB> list){
 
         Collections.sort(list);
+        for (PCB p: list
+             ) {
+            p.setState("finalizado");
+        }
 
         return list;
     }

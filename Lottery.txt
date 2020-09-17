@@ -1,0 +1,225 @@
+
+PID: 6
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 4
+Estado: finalizado
+Prioridade: 5
+=========================================================
+
+PID: 2
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 4
+Estado: finalizado
+Prioridade: 5
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 6
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 4
+Estado: finalizado
+Prioridade: 5
+=========================================================
+
+PID: 6
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 6
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 2
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 1
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 6
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 2
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 1
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 2
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 4
+Estado: finalizado
+Prioridade: 5
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 4
+Estado: finalizado
+Prioridade: 5
+=========================================================
+
+PID: 3
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 3
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 3
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 2
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 3
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 3
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 1
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 1
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 1
+Estado: finalizado
+Prioridade: 1
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================
+
+PID: 5
+Estado: finalizado
+Prioridade: 6
+=========================================================

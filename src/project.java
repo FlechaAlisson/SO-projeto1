@@ -13,13 +13,15 @@ public class project {
         FileHandler fileHandler = new FileHandler("./src/processos.txt");
         Scheduling s = new Scheduling();
         Data data = fileHandler.readFile();
-        ArrayList<PCB> list1 = new ArrayList<PCB>(data.list);
-        Collections.copy(list1, data.list);
-        ArrayList<PCB> list2= new ArrayList<PCB>(data.list);;
-        Collections.copy(list2, data.list);
+        ArrayList<PCB> list1 = data.cloneList();
+        ArrayList<PCB> list2= data.cloneList();
 
-        fileHandler.writeData(s.shorttestFirst(list1), "STF");
-        fileHandler.writeData(s.lottery(list2, data.quantum), "LOTTERY");
+
+        System.out.println(data.list);
+//
+        System.out.println(s.shorttestFirst(list2));
+
+        fileHandler.writeData(s.lottery(list1,data.quantum), "Lottery");
 
     }
 }
