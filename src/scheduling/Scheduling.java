@@ -16,16 +16,16 @@ public class Scheduling {
         while(!list.isEmpty()) {
 
             int aux =  Math.abs(r.nextInt() % list.size());
+            list.get(aux).setState("bloqueado");
             newList.add(list.get(aux));
             /*Seta o novo valor do tempo necessario pra terminar o processo
             * se o valor for menor do que 0, então ele só atribui o 0 */
             list.get(aux).setTimeNecessary((list.get(aux).getTimeNecessary() - quantum) < 0 ? 0 :
                     list.get(aux).getTimeNecessary() - quantum);
             //muda o estado pra bloqueado
-            list.get(aux).setState("bloqueado");
             //se o tempo necessario for melhor ou igual a zero, entao muda pra finalizado e o retira da lista
             if (list.get(aux).getTimeNecessary() <= 0) {
-                list.get(aux).setState("finalizado");
+                newList.get(aux).setState("finalizado");
                 list.remove(aux);
             }
         }
